@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Question 1</title>
+
+
+    </head>
+    <body>
+        <h1>Question 1</h1>
+
+
+        
+        Today is : <span id="demo1"></span><br><br>
+
+        Current Time is : <span id="demo2"></span> PM : <span id="demo3"></span>: <span id="demo4"></span>
+
+
+        <script>
+        var days=['Sunday','Monday','Tueday','Wednesday','Thursday','Friday','Saturday']
+        
+        var today=new Date()
+        document.getElementById("demo1").innerHTML = days[today.getDay()];
+        document.getElementById("demo2").innerHTML = today.getHours();
+        document.getElementById("demo3").innerHTML = today.getMinutes();
+        document.getElementById("demo4").innerHTML = today.getSeconds();
+
+        </script>
+    </body>
+</html>

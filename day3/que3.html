@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 3</title>
+</head>
+<body>
+    Enter Marks : <input type="text" id="marks">
+    <br><br>
+    <input type="submit" value="O/p using if-else" onclick="grade()">
+
+    <input type="submit" value="O/p using Ternary" onclick="grade1()">
+
+    <br><br>
+    <p id="demo"></p>
+    <br><br>
+    <p id="demo1"></p>
+    <script>
+        //using if else ladder
+
+        function grade()
+        {
+            var a = document.getElementById("marks");
+            var grade;
+
+
+
+            if(a.value >= 90 && a.value < 100)
+            {
+              grade = "A";
+            }
+            else if(a.value >= 80 && a.value < 90)
+            {
+              grade = "B";
+            }
+            else if(a.value >= 70 && a.value < 80)
+            {
+              grade = "C";
+            }
+            else if(a.value >= 60 && a.value < 70)
+            {
+              grade = "D";
+            }
+            else if(a.value >= 50 && a.value < 60)
+            {
+              grade = "E";
+            }
+            else
+            {
+                grade = "Fail";
+            }
+             document.getElementById("demo").innerHTML = "Marks are "+ a.value + " and Grade is "+ grade ;
+        }
+
+
+        //using Ternary operator
+
+        function grade1()
+        {
+            var a = document.getElementById("marks");
+            var grade;
+
+            grade = (a.value >= 90 && a.value < 100) ? "A" :
+                    (a.value >= 80 && a.value < 90) ? "B" :
+                    (a.value >= 70 && a.value < 80) ? "C" :
+                    (a.value >= 60 && a.value < 70) ? "D" :
+                    (a.value >= 50 && a.value < 60) ? "E" : "Fail"
+
+
+             document.getElementById("demo1").innerHTML = "Marks are "+ a.value + " and Grade is "+ grade ;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 1</title>
+</head>
+<body>
+    Input : <input type="number" id="demo">
+
+    <br><br>
+
+    <input type="button" value="submit" onclick="fun()">
+
+    <script>
+        var a = document.getElementById("demo");
+        var result;
+        console.log("Number:" + a.value);
+
+        function fun()
+        {
+            if(a.value%2 == 0)
+            {
+                 result="Even";
+            }
+            else
+            {
+                result="Odd";
+            }
+            console.log("Number Entered is " + a.value + " and Number is " +result);
+        }
+
+    </script>
+</body>
+</html>

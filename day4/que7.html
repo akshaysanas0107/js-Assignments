@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 7</title>
+</head>
+<body>
+    Enter Range to find Prime Numbers:<br><br>
+    2  To  <input type="text" id="stop">
+    <br><br>
+    <input type="submit" value="Find Prime Nos" onclick="prime()">
+    <br><br>
+    <p id="result"></p>
+
+    <script>
+
+        function prime()
+        {
+            var n = Number(document.getElementById("stop").value);
+            var list =[];
+
+            for(var i=2;i<=n;i++)
+            {
+                if(isprime(i))
+                {
+                    list.push(i);
+                }
+            }
+
+            document.getElementById("result").innerHTML = "Prime Nos: " +list ;
+
+        }
+
+
+        function isprime(n)
+        {
+            var flag = 0;
+
+
+            for(var i=2;i<n;i++)
+            {
+                if(n%i===0)
+                {
+                    flag = 1;
+
+                }
+            }
+
+            if(flag == 1)
+            {
+                //document.getElementById("result").innerHTML = "Not prime" ;
+                return false;
+            }
+            else
+            {
+                //document.getElementById("result").innerHTML = "prime" ;
+                return true;
+            }
+
+        }
+
+    </script>
+</body>
+</html>

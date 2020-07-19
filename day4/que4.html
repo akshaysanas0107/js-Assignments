@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 4</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <input type="text" id="no1" placeholder="Enter First no">
+    <select id="op">
+        <option>Select operation</option>
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+        <option>sqrt</option>
+        <option>Percent Of</option>
+    </select>
+    <input type="text" id="no2" placeholder="Enter second no">
+    <b style="font-size:30px;">=</b>
+    <strong id="result" style="font-size:30px;"></strong>
+    <br><br>
+    <input type="submit" value="calculate" onclick="calculate()">
+
+    <script>
+        function calculate()
+        {
+            var no1 = Number(document.getElementById("no1").value);
+            var no2 = Number(document.getElementById("no2").value);
+            var op = document.getElementById("op").value;
+            var result;
+
+            //document.write(no1);
+           // document.write(no2);
+            //document.write(op);
+
+            switch (op)
+            {
+                case "+" : result = no1 + no2 ;
+                            break;
+
+                case "-" : result = no1 - no2 ;
+                            break;
+
+                case "*" : result = no1 * no2 ;
+                            break;
+
+                case "/" : result = no1 / no2 ;
+                            break;
+
+                case "sqrt" : result = Math.sqrt(no2) ;
+                            break;
+
+                case "Percent Of" : result = (no1 / 100) * no2 ;
+                            break;
+            }
+
+
+            document.getElementById("result").innerHTML = result ;
+        }
+
+    </script>
+</body>
+</html>

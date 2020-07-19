@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question 5</title>
+</head>
+<body>
+    Enter sales done :<input type="text" id="sales">
+
+    <input type="submit" value="Calculate Commission" onclick="commission()">
+    <script>
+        function commission()
+        {
+            var sale = Number(document.getElementById("sales").value);
+            var commission;
+
+            if(sale > 0 && sale <= 5000)
+            {
+                commission = (2 / 100 ) * sale;
+            }
+            else if(sale > 5001 && sale <= 10000)
+            {
+                commission = (5 / 100 ) * sale;
+            }
+            else if(sale > 10001 && sale <= 20000)
+            {
+                commission = (7 / 100 ) * sale;
+            }
+            else if(sale > 20000)
+            {
+                commission = (10 / 100 ) * sale;
+            }
+
+            //document.write("commission = "+ commission);
+
+            console.log("Total commission earned = " + commission);
+        }
+    </script>
+</body>
+</html>
